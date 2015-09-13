@@ -1,4 +1,4 @@
-package io.uxtesting.android50ec_uxeample;
+package io.uxtesting.android50ec_uxexample;
 
 import io.uxtesting.UXTesting;
 import android.app.Activity;

@@ -1,4 +1,4 @@
-package io.uxtesting.android50ec_uxeample;
+package io.uxtesting.android50ec_uxexample;
 
 import android.app.Application;
 
@@ -9,6 +9,7 @@ public class CustomApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        
         UXTesting.Init(this, "MY_APP_KEY");
     }
 
