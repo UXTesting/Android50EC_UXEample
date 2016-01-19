@@ -1,5 +1,5 @@
 # Android50AS_UXExample
-UXTesting Android Example Pject
+UXTesting Android Example Project
 <br>
 
 
@@ -44,22 +44,32 @@ UXTesting Android Example Pject
 	<service android:enabled="true" android:name="io.uxtesting.UXTestingService" />
 	```
 
-5. Call this method in onActivityResult method of every Activity which will start screen record.
+5. Call this method in onActivityResult method of every Activities which will start screen record, or call in every Activities for API 23+ (6.0+) permissions processing.
 	```java
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        UXTesting.onActivityResult(requestCode, resultCode, data);
+	    super.onActivityResult(requestCode, resultCode, data);
+	    UXTesting.onActivityResult(requestCode, resultCode, data);
 	}
 	```
 
-6. Run your application.
+6. Call this method in onRequestPermissionsResult method for API 23+ (6.0+) permissions processing.
+	```java
+	@Override
+	public void onRequestPermissionsResult(int requestCode,
+	                                       String permissions[], int[] grantResults)  {
+	    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+	    UXTesting.onRequestPermissionsResult(requestCode, permissions, grantResults);
+	}
+	```
 
-7. Shake to start your recording.
+7. Run your application.
 
-8. Shake to end your recording. 
+8. Shake to start your recording.
 
-9. Go to [UXTesting Website](http://www.uxtesting.io/apps/) to view the results with your account.
+9. Shake to end your recording. 
+
+10. Go to [UXTesting Website](http://www.uxtesting.io/apps/) to view the results with your account.
 
 <br>
 
